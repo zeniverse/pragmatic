@@ -71,7 +71,8 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 db.sqlite3
-.idea
+.idea/
+__pycache__/
 
 #가상환경이라 추적할 필요가 없기때문에 제외
 venv/
