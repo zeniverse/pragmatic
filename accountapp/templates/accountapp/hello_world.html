@@ -6,6 +6,17 @@
         <h1>
             testing
         </h1>
+
+        <form action="/account/hello_world/" method="post">
+            <!--     Django를 이용해서 post 메세지를 보낼때 항상 csrf_token이 필요함       -->
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="POST">
+        </form>
+
+        <h1>
+            {{ text }}
+        </h1>
+
     </div>
 
 {% endblock %}
