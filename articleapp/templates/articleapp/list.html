@@ -6,13 +6,21 @@
 
 <style>
 
+    .container {
+        padding: 0px;
+        margin: 0, auto;
+    }
+
+    .container a {
+       width: 45%;
+       max-width: 250px;
+    }
+
     .container div {
-      width: 250px;
-      background-color: antiquewhite;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 2rem;
+      border-radius: 1rem;
     }
 
     .container img {
@@ -31,7 +39,7 @@
         </a>
         {% endfor %}
     </div>
-    <script src="{% static 'js/magicgrid.js' %}"></script>
+    <script src="{% static 'js/magicgrid.js' %}?ver=1"></script>
 
     {% else %}
     <div class="text-center">
@@ -42,7 +50,7 @@
     {% include 'snippets/pagination.html' with page_obj=page_obj %}
 
     <div style="text-align: center;">
-        <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill col-3 mt-3 mb-3">
+        <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill mt-3 mb-3 px-3 ">
             Create Article
         </a>
     </div>
